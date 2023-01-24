@@ -20,7 +20,7 @@ jobs:
         run: |
           apt-get update -y
           apt-get install zip
-          apt-get install gh
+          apt-get install gh -y
           swift build -c release
           cp ./.build/release/figma-export ./Release/figma-export
           cp -r ./.build/release/figma-export_AndroidExport.resources ./Release/figma-export_AndroidExport.resources
@@ -29,7 +29,7 @@ jobs:
       - name: "Upload assets to a release"
         run: |
           apt-get update -y
-          apt-get install gh
+          apt-get install gh -y
           git config --global safe.directory '*'
           gh release upload ${{ github.event.release.tag_name }} figma-export-linux.zip
         env:
