@@ -9,7 +9,7 @@ jobs:
   release-linux:
     permissions: write-all
     name: Linux release
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     container:
       image: swift:5.7.3-focal
     steps:
