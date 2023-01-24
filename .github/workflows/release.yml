@@ -49,7 +49,7 @@ jobs:
     name: Linux release
     runs-on: ubuntu-22.04
     container:
-      image: swift:5.7.3-jammy
+      image: swift:5.7.3-focal
     steps:
       - name: Checkout
         uses: actions/checkout@v2
