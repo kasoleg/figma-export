@@ -45,6 +45,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
 
   release-linux:
+    permissions: write-all
     name: Linux release
     runs-on: ubuntu-22.04
     container:
