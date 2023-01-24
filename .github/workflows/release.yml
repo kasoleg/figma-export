@@ -65,6 +65,7 @@ jobs:
 
       - name: "Upload assets to a release"
         run: |
+          apt-get update -y
           apt-get install gh
           git config --global safe.directory '*'
           gh release upload ${{ github.event.release.tag_name }} figma-export-linux.zip
